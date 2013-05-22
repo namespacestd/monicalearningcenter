@@ -7,10 +7,19 @@
 
 		<meta charset="utf-8" />
     	<link rel="stylesheet" href="/static/css/home.css" />
-   
+    	<script type = "text/javascript" src = "/static/js/home_slide.js"></script>
+    	<script type = "text/javascript" src= "/static/js/jquery-1.9.0.min.js"></script>
+    	<script type="text/javascript">
+    		$(window).bind("load", function() {
+    			var numSlides = 2;
+      			startSlideshow(numSlides);
+      		});
+      	</script>
+      
 	</head>
 	<body>
-		<h1>Home Page</h1>
-		sdf
+		<div id = "slideshow_background">
+		</div>
+
 	</body>
 </html>

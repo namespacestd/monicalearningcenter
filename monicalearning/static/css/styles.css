@@ -1,0 +1,132 @@
+/*!
+ * Recharge addition to Bootstrap v2.0.2
+ *
+ * Design by Diesel Laws
+ * http://diesellaws.com
+ * @diesellaws
+ * 
+ */
+body {
+    /*background: #FFF;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Open Sans', sans-serif;
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*#svv {
+    text-decoration: none;
+    font-family: 'Belleza', sans-serif;
+    font-size: 40.5px;
+    color: #000;
+}
+
+.menu{
+    margin-top: 13px;
+}
+
+.menuitem {
+    text-decoration: none;
+    color: #333333; 
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+}*/
+
+#SVV {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#menu {
+  margin-top: 5em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.menuitem {
+  font-family: 'IM Fell Great Primer', serif;
+  font-style: italic;
+  text-decoration: none;
+  font-size: 3em;
+  padding-left: 1em;
+  padding-right: 1em;
+  color:rgb(200,200,200);
+  background-color:rgba(0,0,0,0.5);
+}
+
+#logo {
+    height: 40px;
+    width: 40px;
+}
+
+.title {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.main {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.container p {
+    color: #808080;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.right-main p {
+    font-size: 15px;
+   line-height: 22px;
+    color:#808080;
+}
+
+.left-main {
+    float: left;
+    height: auto;
+    margin-right: 30px;
+    width: 400px;
+    padding: 10px;
+}
+
+.container {
+    margin-top: 20px;
+    width: 620px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.left-main {
+    width: 200px;
+}
+
+.left-main img {
+    float:right;
+}
+.right-main {
+    width: 350px;
+    float:left;
+    padding: 50px 10px 10px;
+}

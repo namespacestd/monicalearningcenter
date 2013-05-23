@@ -67,6 +67,15 @@ a {
   overflow: scroll;
 }
 
+p.container{
+  margin: 0px 50px 0px;
+}
+
+h1.container{
+  margin-top: 50px;
+  text-align: center;
+}
+
 #icon_box{
 	background-color: green;
 	position: absolute;

@@ -12,17 +12,16 @@
     	<script type = "text/javascript" src = "/static/js/resources.js"> </script>      
 	</head>
 	<body>
-		<div id = "main">
-			{% include 'menu_bar.html' %}
+		{% include 'menu_bar.html' %}
 
-			<div id = "container">
-				<div class = "subtabs" id = "init_tab"> INITIAL RESOURCE </div>
-            	<div class = "subtabs" id = "practice_info"> PRACTICE </div>
-				<div class = "subtabs" id = "intern_info"> INTERNS </div>
-				<div class = "subtabs" id = "aid_info"> FINANCIAL AID </div>
-			</div>	
+		<div id = "container">
+			<div class = "subtabs" id = "init_tab"> INITIAL RESOURCE </div>
+            <div class = "subtabs" id = "practice_info"> PRACTICE </div>
+			<div class = "subtabs" id = "intern_info"> INTERNS </div>
+			<div class = "subtabs" id = "aid_info"> FINANCIAL AID </div>
+		</div>	
 			
-			{% include 'slogan.html' %}
-		</div>
+		{% include 'slogan.html' %}
+		
 	</body>
 </html>

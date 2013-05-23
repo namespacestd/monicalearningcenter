@@ -1,46 +1,38 @@
-<div id = "nav">
-	<a href = "/"> <div id = "logo"></div> </a>
-	<div id = "menu">
-		<div id = "menu_item"> 
-			{% if not program %}
-				<a href="our_program"> Our Program </a> 
-			{% else %}
-				<a class = "init" id = "program"> Our Program </a>
-			{% endif %}
+<div id = "main">
+	<div id = "nav">
+		<a href = "/"> <div id = "logo"></div> </a>
+		<div id = "menu">
+			<div id = "menu_item"> 
+				{% if not program %}
+					<a href="our_program"> Our Program </a> 
+				{% else %}
+					<a class = "init" id = "program"> Our Program </a>
+				{% endif %}
 
+			</div>
+				{% if program %}
+					<div class = "dropdown_option" id = "mathsci"> Math / Science </div>
+					<div class = "dropdown_option" id = "english"> English </div>
+					<div class = "dropdown_option" id = "sat"> SAT　/ ACT / PSAT </div>
+					<div class = "dropdown_option" id = "ssat"> SSAT </div>
+					<div class = "dropdown_option" id = "star"> Star </div>
+					<div class = "dropdown_option" id = "chinese"> Chinese </div>
+				{% endif %}
+			<div id = "menu_item"> 
+				{% if not resources %}
+					<a href="resources"> Resources </a>
+				{% else %}
+					<a class = "init" id = "resource"> Resources </a>
+				{% endif %}
+			</div>
+				{% if resources %}
+					<div class = "dropdown_option" id = "practice"> Practice </div>
+					<div class = "dropdown_option" id = "intern"> Volunteer / Internship Opportunities </div>
+					<div class = "dropdown_option" id = "aid"> Financial Aid </div>				
+				{% endif %}
+			<div id = "menu_item"> <a href="testimony"> Testimony </a> </div>
+			<div id = "menu_item"> <a href="register"> Registration </a> </div>
+			<div id = "menu_item"> <a href="contact"> Contact Us </a> </div>
+			<div id = "menu_item"> <a href="http://www.youngworldpreschool.org/"> Young World Preschool </a> </div>
 		</div>
-			{% if program %}
-				<div class = "dropdown_option" id = "mathsci"> Math / Science </div>
-				<div class = "dropdown_option" id = "english"> English </div>
-				<div class = "dropdown_option" id = "sat"> SAT　/ ACT / PSAT </div>
-				<div class = "dropdown_option" id = "ssat"> SSAT </div>
-				<div class = "dropdown_option" id = "star"> Star </div>
-				<div class = "dropdown_option" id = "chinese"> Chinese </div>
-			{% endif %}
-		<div id = "menu_item"> 
-			{% if not resources %}
-				<a href="resources"> Resources </a>
-			{% else %}
-				<a class = "init" id = "resource"> Resources </a>
-			{% endif %}
-		</div>
-			{% if resources %}
-				<div class = "dropdown_option" id = "practice"> Practice </div>
-				<div class = "dropdown_option" id = "intern"> Volunteer / Internship Opportunities </div>
-				<div class = "dropdown_option" id = "aid"> Financial Aid </div>				
-			{% endif %}
-		<div id = "menu_item"> <a href="testimony"> Testimony </a> </div>
-		<div id = "menu_item"> <a href="register"> Registration </a> </div>
-		<div id = "menu_item"> <a href="contact"> Contact Us </a> </div>
-		<div id = "menu_item"> <a href="http://www.youngworldpreschool.org/"> Young World Preschool </a> </div>
 	</div>
-
-	<div id = "icon_box">
-		<!--<img src = "/static/img/icon1.png" />
-		<img src = "/static/img/icon2.png" />
-		</br>
-		<img src = "/static/img/icon3.png" />
-		<img src = "/static/img/icon4.png" /> -->
-
-	</div>
-</div>

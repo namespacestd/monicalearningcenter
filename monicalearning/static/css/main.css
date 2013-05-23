@@ -68,6 +68,7 @@ a {
 	float: right;
 	background-color: rgb(81,107,138);
 	overflow: auto;
+	text-align: center;
 }
 
 .container p{
@@ -107,4 +108,8 @@ a {
 
 .init{
 	cursor: pointer;
+}
+.bold{
+	font-weight: bold;
+	font-size: 1.2em;
 }

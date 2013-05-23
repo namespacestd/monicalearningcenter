@@ -11,22 +11,30 @@
 	padding-top: 5px;
 	color: red;
 }
-#registration{
-	margin-left: auto;
-	margin-right: auto;
+#question{
+	margin-left: 160px;
 	text-align: left;
+	width: 750px;
 }
-#reg_form{
+#contact_form{
 	padding-top: 10px;
 	text-align: center;
 }
 label{
 	padding-right: 20px;
 }
-
-#reg_title{
-	font-size: 30px;
+#success{
+	font-size: 50px;
+}
+#question_title{
 	text-align: center;
-	margin:6px;
-	margin-bottom: 0px;
+	font-size: 21px;
+	padding-top: 25px;
+	padding-bottom: 20px;
+}
+.container{
+	font-size: 20px;
+}
+.contact_body{
+	padding-top: 50px;
 }

@@ -24,13 +24,12 @@ label{
 	padding-right: 20px;
 }
 
-#reg_title{
-	font-size: 30px;
-	text-align: center;
-	margin:6px;
-	margin-bottom: 0px;
-}
 #success{
 	padding-top: 250px;
 	font-size: 50px;
+}
+#reg_title{
+	padding-top: 5px;
+	font-size: 28px;
+	font-weight: bold;
 }

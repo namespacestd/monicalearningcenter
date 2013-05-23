@@ -32,10 +32,23 @@ class RegistrationForm(forms.Form):
 	parent_2_phone = forms.CharField(required = False, label = "Parent 2 Phone", max_length=15)
 	program_selection = forms.ChoiceField(label="Program Selection", choices=PROGRAMS)
 	program_duration = forms.CharField(required=False, label="Program Duration", max_length=20)
-	location = forms.ChoiceField(choices = LOCATIONS)
+	location = forms.ChoiceField(required = False, choices = LOCATIONS)
 	best_time = forms.CharField(required=False, label = "When would be the best time to call?", max_length=30)
 	hear = forms.ChoiceField(required=False, label = "How did you hear about MLC?", choices = HEAR)
 	other = forms.CharField(required=False, label = "If other, please specify")
 	other_comments = forms.CharField(required=False, widget=forms.Textarea)
+
+class ContactForm(forms.Form):
+	LOCATIONS = (
+		{'-', '<None Selected>'},
+		('Mission (SF)', 'Mission (SF)'),
+		('Sunset (SF)', 'Sunset (SF)')
+	)
+	name = forms.CharField(max_length=30)
+	phone = forms.CharField(max_length=15)
+	email = forms.EmailField(max_length=30)
+	location = forms.ChoiceField(label = "Pick-Up Location", required = False, choices = LOCATIONS)
+	questions = forms.CharField(widget=forms.Textarea)
+	
 
 

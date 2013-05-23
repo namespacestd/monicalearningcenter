@@ -7,12 +7,53 @@
 
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="/static/css/reset.css" />
-		<link rel="stylesheet" href="/static/css/main.css" />      
+		<link rel="stylesheet" href="/static/css/main.css" />
+		<link rel="stylesheet" href="/static/css/contact.css" />   
 	</head>
 	<body>
 		{% include 'menu_bar.html' %}
 
 		<div class = "container">
+			<div class = "contact_body">
+				We have two convenient locations in San Francisco (Mission and Sunset) </br></br>
+
+				If you have any questions, feel free to send a message to us using the form
+				at the </br> bottom, or email us at: </br></br> <div class="bold"> monicalearning@yahoo.com </div></br></br>
+
+				Or contact us via telephone at: </br></br>
+
+				<div class="bold">
+					Mission 415-239-1688 </br>
+					Sunset 415-668-2808 </br>
+				</div>
+				
+				<div id = "question_title" >
+					Have any questions? Fill out the form below and we'll get back to you
+					as soon as possible!
+				</div>
+				
+				<div id = "contact_form">
+
+
+					{% if email_sent %}
+						<div id = "success"> Thank You for Your Question! </div>
+					{% else %}
+						{% if form.errors %}
+				        	<div id = "error">
+				            	Please correct the error{{ form.errors|pluralize }} below.
+				        	</div>
+			  		  	{% endif %}
+
+			   			<form action="" method="post">
+			        		<table id = "question">
+			            		{{ form.as_table }}
+			       			</table>
+			       			{% csrf_token %}
+			       			<input type="submit" value="Submit">
+			   			</form>
+			   		{% endif %}
+			   	</div>
+			</div>
 		</div>	
 
 		{% include 'slogan.html' %}

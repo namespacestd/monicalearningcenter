@@ -62,3 +62,13 @@ a {
 	float: right;
 	background-color: blue;
 }
+
+#icon_box{
+	background-color: green;
+	position: absolute;
+	width: 350px;
+	height: 100px;
+}
+.icon{
+
+}

@@ -61,7 +61,7 @@ a {
 	text-decoration: none;
 }
 
-#container{
+.container{
 	position: relative;
 	width: 960px;
 	height: 720px;

@@ -29,5 +29,5 @@ function slideShow(){
 	currentSlide = currentSlide + 1;
 	if(currentSlide > slideNumber)
 		currentSlide = 1;
-	$('#slide'+currentSlide).delay(2000).fadeIn(2000);
+	$('#slide'+currentSlide).fadeIn(2000);
 }

@@ -8,7 +8,6 @@
 	margin:100px auto 0px;
 	width: 1310px;
 	height: 720px;
-	background-color: blue;
 }
 #nav {
 	margin:0px auto 0px 0px;
@@ -18,13 +17,15 @@
 	float: left;
 }
 #slideshow_background {
+	position: relative;
 	width: 960px;
 	height: 720px;
-	background-color: red;
 	float: right;
 }
 .slide{
-
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 #slogan{
 	position: absolute;
@@ -32,6 +33,20 @@
 	width: 1310px;
 	height: 60px;
 	bottom: 225px;
+	font-size: 1.05em;
+}
+#contact_info{
+	padding-top: 10px;
+	width: 350px;
+	text-align: center;
+	float: left;
+}
+#slogan_text{
+	font-size: 1.75em;
+	float: right;
+	width: 960px;
+	padding-top: 10px;
+	text-align: center;
 }
 #logo{
 	height: 125px;

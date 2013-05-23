@@ -76,14 +76,15 @@ h1.container{
   text-align: center;
 }
 
-#icon_box{
-	background-color: green;
-	position: absolute;
-	width: 350px;
-	height: 100px;
+#icon_bar{
+	margin-left: auto;
+	margin-right: auto;
+	width: 1310px;
+	height: 75px;
+	text-align: center;
 }
 .icon{
-
+	padding: 10px;
 }
 .init_tab{
 	position: absolute;

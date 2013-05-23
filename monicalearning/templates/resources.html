@@ -7,13 +7,19 @@
 
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="/static/css/reset.css" />
-		<link rel="stylesheet" href="/static/css/main.css" />      
+		<link rel="stylesheet" href="/static/css/main.css" />
+		<script type = "text/javascript" src= "/static/js/jquery-1.9.0.min.js"></script>
+    	<script type = "text/javascript" src = "/static/js/resources.js"> </script>      
 	</head>
 	<body>
 		<div id = "main">
 			{% include 'menu_bar.html' %}
 
 			<div id = "container">
+				<div class = "subtabs" id = "init_tab"> INITIAL RESOURCE </div>
+            	<div class = "subtabs" id = "practice_info"> PRACTICE </div>
+				<div class = "subtabs" id = "intern_info"> INTERNS </div>
+				<div class = "subtabs" id = "aid_info"> FINANCIAL AID </div>
 			</div>	
 			
 			{% include 'slogan.html' %}

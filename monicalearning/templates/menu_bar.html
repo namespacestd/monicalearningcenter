@@ -17,11 +17,17 @@
 				<div class = "dropdown_option" id = "star"> Star </div>
 				<div class = "dropdown_option" id = "chinese"> Chinese </div>
 			{% endif %}
-		<div id = "menu_item"> <a href="resources"> Resources </a> </div>
+		<div id = "menu_item"> 
+			{% if not resources %}
+				<a href="resources"> Resources </a>
+			{% else %}
+				<a class = "init" id = "resource"> Resources </a>
+			{% endif %}
+		</div>
 			{% if resources %}
-				<div class = "dropdown_option"> Practice </div>
-				<div class = "dropdown_option"> Volunteer / Internship Opportunities </div>
-				<div class = "dropdown_option"> Financial Aid </div>				
+				<div class = "dropdown_option" id = "practice"> Practice </div>
+				<div class = "dropdown_option" id = "intern"> Volunteer / Internship Opportunities </div>
+				<div class = "dropdown_option" id = "aid"> Financial Aid </div>				
 			{% endif %}
 		<div id = "menu_item"> <a href="testimony"> Testimony </a> </div>
 		<div id = "menu_item"> <a href="register"> Registration </a> </div>

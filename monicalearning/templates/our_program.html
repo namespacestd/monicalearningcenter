@@ -7,14 +7,25 @@
 
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="/static/css/reset.css" />
-		<link rel="stylesheet" href="/static/css/main.css" />      
+		<link rel="stylesheet" href="/static/css/main.css" /> 
+		<script type = "text/javascript" src= "/static/js/jquery-1.9.0.min.js"></script>
+    	<script type = "text/javascript" src = "/static/js/program.js"> </script>
 	</head>
 	<body>
 		<div id = "main">
 			{% include 'menu_bar.html' %}
+
 			<div id = "container">
-				
+				<div class = "subtabs" id = "init_tab"> INITIAL PROGRAM </div>
+            	<div class = "subtabs" id = "mathsci_info"> MATH AND SCIENCE</div>
+				<div class = "subtabs" id = "english_info"> ENGLISH </div>
+				<div class = "subtabs" id = "sat_info"> SAT AND ETC </div>
+				<div class = "subtabs" id = "ssat_info"> SSAT </div>
+				<div class = "subtabs" id = "star"> STAR </div>
+				<div class = "subtabs" id = "chinese"> CHINESE </div>
+
 			</div>			
+
 			{% include 'slogan.html' %}
 		</div>
 	</body>

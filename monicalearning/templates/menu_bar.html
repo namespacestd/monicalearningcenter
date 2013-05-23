@@ -1,20 +1,27 @@
 <div id = "nav">
 	<a href = "/"> <div id = "logo"></div> </a>
 	<div id = "menu">
-		<div id = "menu_item"> <a href="our_program"> Our Program </a> </div>
+		<div id = "menu_item"> 
+			{% if not program %}
+				<a href="our_program"> Our Program </a> 
+			{% else %}
+				<a class = "init" id = "program"> Our Program </a>
+			{% endif %}
+
+		</div>
 			{% if program %}
-				<div id = "dropdown_option"> Math / Science </div>
-				<div id = "dropdown_option"> English </div>
-				<div id = "dropdown_option"> SAT　/ ACT / PSAT </div>
-				<div id = "dropdown_option"> SSAT </div>
-				<div id = "dropdown_option"> Star </div>
-				<div id = "dropdown_option"> Chinese </div>
+				<div class = "dropdown_option" id = "mathsci"> Math / Science </div>
+				<div class = "dropdown_option" id = "english"> English </div>
+				<div class = "dropdown_option" id = "sat"> SAT　/ ACT / PSAT </div>
+				<div class = "dropdown_option" id = "ssat"> SSAT </div>
+				<div class = "dropdown_option" id = "star"> Star </div>
+				<div class = "dropdown_option" id = "chinese"> Chinese </div>
 			{% endif %}
 		<div id = "menu_item"> <a href="resources"> Resources </a> </div>
 			{% if resources %}
-				<div id = "dropdown_option"> Practice </div>
-				<div id = "dropdown_option"> Volunteer / Internship Opportunities </div>
-				<div id = "dropdown_option"> Financial Aid </div>				
+				<div class = "dropdown_option"> Practice </div>
+				<div class = "dropdown_option"> Volunteer / Internship Opportunities </div>
+				<div class = "dropdown_option"> Financial Aid </div>				
 			{% endif %}
 		<div id = "menu_item"> <a href="testimony"> Testimony </a> </div>
 		<div id = "menu_item"> <a href="register"> Registration </a> </div>

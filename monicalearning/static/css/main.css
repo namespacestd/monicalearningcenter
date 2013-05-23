@@ -45,10 +45,11 @@
 #menu_item{
 	margin-top: 10px;
 }
-#dropdown_option{
+.dropdown_option{
 	font-size: .75em;
 	padding-left: 30px;
 	padding-top: 10px;
+	cursor: pointer;
 }
 
 a {
@@ -72,4 +73,25 @@ a {
 }
 .icon{
 
+}
+.init_tab{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: orange;
+	width: 960px;
+	height: 720px;
+}
+.subtabs{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 960px;
+	height: 720px;
+	background-color: yellow;
+}
+
+.init{
+	cursor: pointer;
 }

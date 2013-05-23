@@ -28,9 +28,12 @@
 }
 #contact_info{
 	padding-top: 13px;
-	width: 350px;
+	padding-left: 2px;
+	width: 345px;
+	height: 100%;
 	text-align: center;
 	float: left;
+	border-right: 3px solid rgb(215,215,215);
 }
 #logo{
 	height: 125px;
@@ -64,7 +67,7 @@ a {
 	height: 720px;
 	float: right;
 	background-color: rgb(81,107,138);
-  overflow: scroll;
+	overflow: auto;
 }
 
 #icon_bar{
@@ -81,7 +84,6 @@ a {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-color: orange;
 	width: 960px;
 	height: 720px;
 }
@@ -92,7 +94,6 @@ a {
 	left: 0;
 	width: 960px;
 	height: 720px;
-	background-color: yellow;
 }
 
 .init{

@@ -46,11 +46,19 @@
 }
 #dropdown_option{
 	font-size: .75em;
-	padding-left: 35px;
+	padding-left: 30px;
 	padding-top: 10px;
 }
 
 a {
 	color: inherit;
 	text-decoration: none;
+}
+
+#container{
+	position: relative;
+	width: 960px;
+	height: 720px;
+	float: right;
+	background-color: blue;
 }

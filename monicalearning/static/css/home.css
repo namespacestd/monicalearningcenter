@@ -9,3 +9,13 @@
 	left: 0;
 	top: 0;
 }
+#slogan{
+	width: 1310px;
+}
+#slogan_text{
+	font-size: 1.75em;
+	float: right;
+	width: 960px;
+	padding-top: 10px;
+	text-align: center;
+}

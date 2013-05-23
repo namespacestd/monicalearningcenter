@@ -19,7 +19,7 @@
 #slogan{
 	position: absolute;
 	background-color: rgba(0,0,0,.5);
-	width: 1310px;
+	width: 350px;
 	height: 60px;
 	top: 660px;
 	font-size: 1.05em;
@@ -29,13 +29,6 @@
 	width: 350px;
 	text-align: center;
 	float: left;
-}
-#slogan_text{
-	font-size: 1.75em;
-	float: right;
-	width: 960px;
-	padding-top: 10px;
-	text-align: center;
 }
 #logo{
 	height: 125px;

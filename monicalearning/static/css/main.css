@@ -70,11 +70,11 @@ a {
 	overflow: auto;
 }
 
-p.container{
+.container p{
   margin: 0px 50px 0px;
 }
 
-h1.container{
+.container h1{
   margin-top: 50px;
   text-align: center;
 }

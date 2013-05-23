@@ -1,7 +1,7 @@
 ﻿body {
 	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
 	color:rgb(215,215,215);
-	background-image:url("../img/chalkboardtile2.jpg");
+	background-image:url("../img/chalkboardtile3.jpg");
 	background-repeat:yes;
 }
 #main {
@@ -25,7 +25,7 @@
 	font-size: 1.05em;
 }
 #contact_info{
-	padding-top: 10px;
+	padding-top: 13px;
 	width: 350px;
 	text-align: center;
 	float: left;

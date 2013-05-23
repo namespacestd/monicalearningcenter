@@ -1,16 +1,54 @@
 ﻿body {
-  font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
-  font-color:rgb(215,215,215);
-  background-image:url("../img/chalkboardtile2.jpg");
-  background-repeat:yes;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color:rgb(215,215,215);
+	background-image:url("../img/chalkboardtile2.jpg");
+	background-repeat:yes;
 }
 #main {
-margin:100px auto 0px;
-width: 1310px;
-height: 720px;
+	margin:100px auto 0px;
+	width: 1310px;
+	height: 720px;
+	background-color: blue;
 }
 #nav {
-margin:0px auto 0px 0px;
-background-color:rbg(17,46,80);
-width: 350px;
+	margin:0px auto 0px 0px;
+	background-color:rgb(17,46,80);
+	width: 350px;
+	height: 100%;
+	float: left;
+}
+#slideshow_background {
+	width: 960px;
+	height: 720px;
+	background-color: red;
+	float: right;
+}
+.slide{
+
+}
+#slogan{
+	position: absolute;
+	background-color: rgba(0,0,0,.5);
+	width: 1310px;
+	height: 60px;
+	bottom: 225px;
+}
+#logo{
+	height: 125px;
+	width: 350px;
+	background-color: green;
+}
+
+#menu{
+	margin-top: 15px;
+	margin-left: 25px;
+	font-size: 1.5em;
+}
+#menu_item{
+	margin-top: 10px;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
 }

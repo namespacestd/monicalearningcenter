@@ -6,7 +6,7 @@ function startSlideshow(numSlides){
 	try{
 		var allSlides = "";
 		for (var i=1; i<=numSlides; i++){
-			var slide = begin + i + "\"><img src = \"/static/img/0" + i +".png\" /> </div>";
+			var slide = begin + i + "\"><img src = \"/static/img/0" + i +".jpg\" /> </div>";
 			allSlides += slide;
 		}
 		document.getElementById('slideshow_background').innerHTML = allSlides;

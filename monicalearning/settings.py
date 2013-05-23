@@ -38,6 +38,13 @@ TIME_ZONE = 'America/Chicago'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'kdrwebdesign@gmail.com'
+EMAIL_HOST_PASSWORD = 'sheldonalexsam'
+
+
 SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not

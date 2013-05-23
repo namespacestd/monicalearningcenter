@@ -17,16 +17,23 @@ def resources(request):
 def testimony(request):
 	return render(request, 'testimony.html')
 
-def register(request):
-	return render(request, 'register.html')
-
 def contact_us(request):
+	return render(request, 'contact_us.html')
+
+def register(request):
 	if request.method == 'POST':
 		form = RegistrationForm(request.POST)
 		if form.is_valid():
 			cd = form.cleaned_data
-			send_mail(cd['student_name'], cd['email'], cd['other_comments'], cd.get('email', 'noreply@example.com'), ['ihasnamespacestd@gmail.com'],)
-			return render(request, 'contact_us.html')
+			info = ""
+			for field in form:
+				try:
+					info += (field.label + ": " + cd[field.html_name] + "\n")
+				except Exception: 
+					info += (field.label + ": " + "<Not Filled In>" + "\n")
+				
+			send_mail("Registration Form for: " + cd['student_name'], info, 'noreply@example.com', ['ihasnamespacestd@gmail.com'], fail_silently=False)
+			return render(request, 'register.html', {'email_sent' : True})
 	else:
 		form = RegistrationForm()
-	return render(request, 'contact_us.html', {'form': form})
+	return render(request, 'register.html', {'form': form})

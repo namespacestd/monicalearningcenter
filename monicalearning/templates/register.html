@@ -2,17 +2,44 @@
 <html>
 	<head>
 		<title>
-			Register
+			Contact Us
 		</title>
 
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="/static/css/reset.css" />
-		<link rel="stylesheet" href="/static/css/main.css" />      
+		<link rel="stylesheet" href="/static/css/main.css" /> 
+		<link rel="stylesheet" href="/static/css/register.css" />     
 	</head>
 	<body>
 		{% include 'menu_bar.html' %}
 
 		<div class = "container">
+
+			<div id = "reg_title"> 
+				{% if not email_sent %}
+					Registration 
+				{% endif %}
+			</div>
+			<div id = "reg_form">
+				{% if email_sent %}
+					<div id = "success"> Thanks for Registering! </div>
+				{% else %}
+					{% if form.errors %}
+			        	<div id = "error">
+			            	Please correct the error{{ form.errors|pluralize }} below.
+			        	</div>
+		  		  	{% endif %}
+
+		   			<form action="" method="post">
+		        		<table id = "registration">
+		            		{{ form.as_table }}
+		       			</table>
+		       			{% csrf_token %}
+		       			<input type="submit" value="Submit">
+		   			</form>
+		   		{% endif %}
+
+	   		</div>
 		</div>	
 
 		{% include 'slogan.html' %}

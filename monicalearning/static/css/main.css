@@ -64,7 +64,7 @@ a {
 	height: 720px;
 	float: right;
 	background-color: rgb(81,107,138);
-  overflow: scroll;
+  overflow: auto;
 }
 
 p.container{

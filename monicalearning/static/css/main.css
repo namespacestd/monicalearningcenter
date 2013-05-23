@@ -46,13 +46,53 @@
 #menu_item{
 	margin-top: 10px;
 }
-#dropdown_option{
+.dropdown_option{
 	font-size: .75em;
-	padding-left: 35px;
+	padding-left: 30px;
 	padding-top: 10px;
+	cursor: pointer;
 }
 
 a {
 	color: inherit;
 	text-decoration: none;
+}
+
+#container{
+	position: relative;
+	width: 960px;
+	height: 720px;
+	float: right;
+	background-color: blue;
+}
+
+#icon_box{
+	background-color: green;
+	position: absolute;
+	width: 350px;
+	height: 100px;
+}
+.icon{
+
+}
+.init_tab{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: orange;
+	width: 960px;
+	height: 720px;
+}
+.subtabs{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 960px;
+	height: 720px;
+	background-color: yellow;
+}
+
+.init{
+	cursor: pointer;
 }

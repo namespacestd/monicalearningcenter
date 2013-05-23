@@ -1,5 +1,6 @@
 var currentSlide = 1;
 var slideNumber = 0;
+
 function startSlideshow(numSlides){
 	var begin = "<div class = \"slide\" id = \"slide";
 

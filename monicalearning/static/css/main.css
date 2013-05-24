@@ -90,6 +90,10 @@ a {
 }
 
 .container a{
+  color: rgb(180,180,180);
+}
+
+container a:hover{
   color: rgb(150,150,150);
 }
 

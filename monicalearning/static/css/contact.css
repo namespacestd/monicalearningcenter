@@ -12,9 +12,9 @@
 	color: red;
 }
 #question{
-	margin-left: 160px;
+	margin-left: 50px;
 	text-align: left;
-	width: 750px;
+	width: 900px;
 }
 #contact_form{
 	padding-top: 10px;
@@ -36,5 +36,5 @@ label{
 	font-size: 20px;
 }
 .contact_body{
-	padding-top: 50px;
+	padding-top: 20px;
 }

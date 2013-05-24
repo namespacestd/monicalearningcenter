@@ -66,7 +66,7 @@ def login_request(request):
 		if user is not None and user.is_authenticated():
 			login(request, user)
 
-	return admin_news(request)
+	return redirect('/admin_news')
 
 def logout_request(request):
 	logout(request)

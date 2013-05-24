@@ -23,7 +23,7 @@
 				{% if not resources %}
 					<a href="resources"> Resources </a>
 				{% else %}
-					<a class = "init" id = "resource"> Resources </a>
+					<a class = "init" id = "resources"> Resources </a>
 				{% endif %}
 			</div>
 				{% if resources %}
@@ -33,7 +33,16 @@
 				{% endif %}
 			<div id = "menu_item"> <a href="testimony"> Testimony </a> </div>
 			<div id = "menu_item"> <a href="register"> Registration </a> </div>
-			<div id = "menu_item"> <a href="contact"> Contact Us </a> </div>
+			<div id = "menu_item">
+        {% if not contact %}
+        <a href="contact"> Contact Us </a>
+        {% else %}
+        <a class = "init" id = "contact"> Contact Us </a>
+        {% endif %}
+      </div>
+        {% if contact %}
+        <div class = "dropdown_option" id = "directions"> Directions </div>
+        {% endif %}
 			<div id = "menu_item" class = "superspecial"> <a href="http://www.youngworldpreschool.org/"> Young World Preschool </a> </div>
 		</div>
 

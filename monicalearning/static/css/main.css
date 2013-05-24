@@ -72,6 +72,7 @@ a {
   background-image:url("../img/lbtile.png");
 	background-repeat:yes;
 	overflow: auto;
+	overflow-x: hidden;
 }
 
 .container p{

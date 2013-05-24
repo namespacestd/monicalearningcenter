@@ -3,7 +3,7 @@ var currentTab = 0;
 $(window).bind("load", function() {
 	$('#init_tab').css("display", "inherit");
 
-    $('#resource').click(function(event) {
+    $('#resources').click(function(event) {
     	if(currentTab!=0){
 	    	$('.subtabs').fadeOut(2000);
 	    	$('#init_tab').fadeIn(2000);

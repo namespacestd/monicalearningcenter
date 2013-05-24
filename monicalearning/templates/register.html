@@ -14,7 +14,6 @@
 		{% include 'menu_bar.html' %}
 
 		<div class = "container">
-
 			<h1>
 				{% if not email_sent %}
 					Registration
@@ -24,11 +23,6 @@
 				{% if email_sent %}
 					<div id = "success"> Thanks for Registering! </div>
 				{% else %}
-					{% if form.errors %}
-			        	<div id = "error">
-			            	Please correct the error{{ form.errors|pluralize }} below.
-			        	</div>
-		  		  	{% endif %}
 
 		   			<form action="" method="post">
 		        		<table id = "registration">

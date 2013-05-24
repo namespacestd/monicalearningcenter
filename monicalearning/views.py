@@ -57,7 +57,8 @@ def delete(request):
 		return render(request, 'admin_news.html', {'deleted': True, 'form':form, 'all_news':News_Post.objects.all().order_by('year','month').reverse()})
 
 def login_request(request):
-	username = request.POST['username']
+	print(request.POST.values())
+	username = request.POST['user']
 	password = request.POST['password']
 
 	if(username!="" and password!=""):
@@ -90,7 +91,7 @@ def contact_us(request):
 			return render(request, 'contact_us.html', {'email_sent' : True})
 	else:
 		form = ContactForm()
-	return render(request, 'contact_us.html', {'form': form}, {})
+	return render(request, 'contact_us.html', {'form': form})
 
 def register(request):
 	if request.method == 'POST':

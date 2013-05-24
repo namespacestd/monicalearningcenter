@@ -49,6 +49,30 @@ class ContactForm(forms.Form):
 	email = forms.EmailField(max_length=30)
 	location = forms.ChoiceField(label = "Pick-Up Location", required = False, choices = LOCATIONS)
 	questions = forms.CharField(widget=forms.Textarea)
+
 	
+class NewsForm(forms.Form):
+	NEWS_MONTHS = (
+		('January', 'A-January'),
+		('February', 'B-February'),
+		('March', 'C-March'),
+		('April', 'D-April'),
+		('May', 'E-May'),
+		('June', 'F-June'),
+		('July', 'G-July'),
+		('August', 'H-August'),
+		('September', 'I-September'),
+		('October', 'J-October'),
+		('November', 'K-November'),
+		('December', 'L-December'),
+	)
+	title = forms.CharField(max_length=30, required = False)
+	month = forms.ChoiceField(choices=NEWS_MONTHS)
+	year = forms.IntegerField()
+	news = forms.CharField(widget=forms.Textarea)
+	author = forms.CharField(max_length=30, required = False)
+
+
+
 
 

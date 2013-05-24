@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Testimony
+		</title>
+
+		<meta charset="utf-8" />
+        <link rel="stylesheet" href="/static/css/reset.css" />
+		<link rel="stylesheet" href="/static/css/main.css" />      
+        <link rel="stylesheet" href="/static/css/add_news.css" />
+	</head>
+	<body>
+	
+      {% include 'menu_bar.html' %}
+
+    <div class = "container">
+        {% if logged_in %}
+            <div id = "completed">
+                {% if added %}
+                    News Post Added
+                {% elif deleted %}
+                    News Post Deleted
+                {% endif %}
+            </div>
+            <div class = "add_news">
+                <h1>Add News Item</h1>
+
+                <form action="" method="post">
+                    <table>
+                        {{ form.as_table }}
+                    </table>
+                    {% csrf_token %}
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+            <div class = "delete_news">
+                <h1>Delete News Item</h1>
+                <form action="delete" method="post">
+                    <select name = "to_delete">
+                        {% for news in all_news %}
+                            <option value="{{news.id}}">{{ news.month}} {{ news.year}} : {{ news.title}} </option>
+                        {% endfor %}
+                    </select>
+                    {% csrf_token %}
+                    <input type="submit" value="Delete">
+                </form>
+            </br></br>
+            
+            </div>
+
+            <div class = "logout">
+                <form action="/logout_request/" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Log Out"> </input>
+
+                </form>
+            </div>
+        {% else %}
+            Only for Administrators: Please Login Below
+            <form method="post" action="/login_request/">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="Username" class="login-field" value ="">
+                <input type="password" name="password" placeholder="Password" class="login-field" value = "">
+                <button type="submit" name="submit" class="big-button">Log In</button>
+                <input type="hidden" name="login_form" value="1" />
+                <input type="hidden" name="next" value="/" />
+            </form>
+        {% endif %}
+    </div>
+			
+      {% include 'slogan.html' %}
+	</body>
+</html>

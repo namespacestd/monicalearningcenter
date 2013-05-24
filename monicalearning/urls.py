@@ -4,8 +4,8 @@ from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 # Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from django.contrib import admin
+admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', home),
@@ -16,15 +16,20 @@ urlpatterns = patterns('',
     url(r'^testimony', testimony),
     url(r'^contact', contact_us),
     url(r'^register', register),
+    url(r'^news', news),
+    url(r'^admin_news', admin_news),
+    url(r'^delete', delete),
+    url(r'^login_request', login_request),
+    url(r'^logout_request', logout_request),
     # Examples:
     # url(r'^$', 'monicalearning.views.home', name='home'),
     # url(r'^monicalearning/', include('monicalearning.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
 )
 
 urlpatterns += staticfiles_urlpatterns()

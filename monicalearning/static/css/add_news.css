@@ -1,0 +1,30 @@
+#completed{
+	margin-top: 20px;
+	font-size: 25px;
+	color: red;
+}
+.add_news{
+	width: 45%;
+	text-align: center;
+	margin-left: 20px;
+	background-color: rgba(0,0,0,.2);
+	padding: 15px;
+	padding-top: 0px;
+	margin-top: 75px;
+	float: left;
+}
+h1{
+	font-size: 20px;
+	margin-bottom: 25px;
+}
+
+.delete_news{
+	width: 40%;
+	text-align: center;
+	margin-right: 20px;
+	background-color: rgba(0,0,0,.2);
+	padding: 15px;
+	padding-top: 0px;
+	margin-top: 75px;
+	float: right;
+}

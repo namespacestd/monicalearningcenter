@@ -1,0 +1,42 @@
+
+.news_post{
+	font-size: 18px;
+	background-color: rgba(0,0,0,.2);
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	cursor: pointer;
+}
+.header{
+	width: 90%;
+	height: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding-top: 20px;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.title{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.date{
+	float: right;
+	position: relative;
+	bottom: 23px;
+}
+.news_body{
+	display: none;
+	padding-top: 15px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: justify;
+}

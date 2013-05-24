@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			News
+		</title>
+
+		<meta charset="utf-8" />
+        <link rel="stylesheet" href="/static/css/reset.css" />
+		<link rel="stylesheet" href="/static/css/main.css" />
+        <link rel="stylesheet" href="/static/css/news.css" />
+
+        <script type = "text/javascript" src= "/static/js/jquery-1.9.0.min.js"></script>
+        <script type="text/javascript">
+            $(window).bind("load", function() {
+                {% for news in all_news %}
+                    $('#news_post{{news.id}}').click(function(event) {
+                        if(document.getElementById('news_body{{news.id}}').style.display === "inherit")
+                            $('#news_body{{news.id}}').css("display", "none");
+                        else
+                            $('#news_body{{news.id}}').css("display", "inherit");
+                    });
+                {% endfor %}
+            });
+        </script>
+	</head>
+	<body>
+	
+        {% include 'menu_bar.html' %}
+
+        <div class = "container">
+            {% for news in all_news %}
+            <div class = "news_post" id = "news_post{{ news.id }}"> 
+                <div class = "header"> 
+                    <div class = "title"> {{ news.title }} </div> 
+                    <div class = "date"> {{ news.month}} {{news.year}}</div> 
+                </div> 
+                <div class = "news_body" id = "news_body{{ news.id }}">
+                    {{ news.news|linebreaksbr }} 
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+			
+        {% include 'slogan.html' %}
+	</body>
+</html>

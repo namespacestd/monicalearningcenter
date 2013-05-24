@@ -38,7 +38,7 @@
 #logo{
 	height: 125px;
 	width: 350px;
-	background-color: green;
+	background: url("../img/logo.png") no-repeat fixed center;
 }
 
 #menu{

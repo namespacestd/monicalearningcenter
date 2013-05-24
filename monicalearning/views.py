@@ -66,7 +66,7 @@ def login_request(request):
 		if user is not None and user.is_authenticated():
 			login(request, user)
 
-	return redirect('admin_news.html')
+	return redirect('/admin_news')
 
 def logout_request(request):
 	logout(request)
@@ -90,7 +90,7 @@ def contact_us(request):
 			return render(request, 'contact_us.html', {'email_sent' : True})
 	else:
 		form = ContactForm()
-	return render(request, 'contact_us.html', {'form': form}, {})
+	return render(request, 'contact_us.html', {'form': form})
 
 def register(request):
 	if request.method == 'POST':

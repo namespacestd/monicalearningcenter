@@ -34,15 +34,17 @@
 			<div id = "menu_item"> <a href="testimony"> Testimony </a> </div>
 			<div id = "menu_item"> <a href="register"> Registration </a> </div>
 			<div id = "menu_item">
-        {% if not contact_us %}
-        <a href="contact_us"> Contact Us </a>
-        {% else %}
-        <a class = "init" id = "contact"> Contact Us </a>
-        {% endif %}
-      </div>
-        {% if contact %}
-        <div class = "dropdown_option" id = "directions"> Directions </div>
-        {% endif %}
+        		{% if not contact_us %}
+        			<a href="contact_us"> Contact Us </a>
+        		{% else %}
+        			<a class = "init" id = "contact"> Contact Us </a>
+        		{% endif %}
+      		</div>
+
+        		{% if contact %}
+        			<div class = "dropdown_option" id = "directions"> Directions </div>
+        		{% endif %}
+        		
 			<div id = "menu_item" class = "superspecial"> <a href="http://www.youngworldpreschool.org/"> Young World Preschool </a> </div>
 		</div>
 

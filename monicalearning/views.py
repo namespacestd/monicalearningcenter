@@ -104,10 +104,10 @@ def contact_us(request):
 					info += (field.label + ": " + "<Not Filled In>" + "\n")
 				
 			send_mail("Question Form for: " + cd['name'], info, 'noreply@example.com', ['ihasnamespacestd@gmail.com'], fail_silently=False)
-			return render(request, 'contact_us.html', {'current_schedule' : Schedule.objects.all()[0].name,'email_sent' : True})
+			return render(request, 'contact_us.html', {'contact': True, 'current_schedule' : Schedule.objects.all()[0].name,'email_sent' : True})
 	else:
 		form = ContactForm()
-	return render(request, 'contact_us.html', {'current_schedule' : Schedule.objects.all()[0].name,'form': form})
+	return render(request, 'contact_us.html', {'contact': True, 'current_schedule' : Schedule.objects.all()[0].name,'form': form})
 
 def register(request):
 	if request.method == 'POST':

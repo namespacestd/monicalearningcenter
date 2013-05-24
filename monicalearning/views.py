@@ -18,8 +18,8 @@ def our_program(request):
 def resources(request):
 	return render(request, 'resources.html', { 'current_schedule' : Schedule.objects.all()[0].name,'resources' : True})
 
-def testimony(request):
-	return render(request, 'testimony.html', {'current_schedule' : Schedule.objects.all()[0].name,})
+def about_us(request):
+	return render(request, 'about_us.html', {'about_us' : True, 'current_schedule' : Schedule.objects.all()[0].name,})
 
 def news(request):
 	return render(request, 'news.html', {'current_schedule' : Schedule.objects.all()[0].name,'all_news':News_Post.objects.all().order_by('year','month').reverse(), 'all_news_size':len(News_Post.objects.all())})

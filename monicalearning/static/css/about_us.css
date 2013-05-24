@@ -1,0 +1,29 @@
+
+p{
+	padding-bottom: 10px;
+}
+
+.entry{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15px;
+	height: 30px;
+}
+
+.date{
+	float: left;
+	width: 5%;
+	font-size: 25px;
+}
+.date_entry{
+	float: right;
+	width: 85%;
+	font-size: 20px;
+}
+#second{
+	padding-top: 15px;
+}
+#second_special{
+	padding-bottom: 30px;
+}

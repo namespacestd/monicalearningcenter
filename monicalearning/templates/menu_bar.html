@@ -2,6 +2,19 @@
 	<div id = "nav">
 		<a href = "/"> <img src = "../static/img/logo.png" id = "logo" /> </a>
 		<div id = "menu">
+			<div id = "menu_item"> 
+				{% if not about_us %}
+					<a href="about_us"> About Us </a>
+				{% else %}
+					<a class="init" id = "about_us"> About Us </a>
+				{% endif %}
+			</div>
+				{% if about_us %}
+					<div class = "dropdown_option" id ="history"> History </div>
+					<div class = "dropdown_option" id ="testimony"> Testimony </div>
+				{% endif %}	
+
+
       <div id = "menu_item"> <a href="news"> News </a> </div>
 			<div id = "menu_item"> 
 				{% if not program %}
@@ -30,8 +43,7 @@
 					<div class = "dropdown_option" id = "practice"> Practice </div>
 					<div class = "dropdown_option" id = "intern"> Volunteer / Internship Opportunities </div>
 					<div class = "dropdown_option" id = "aid"> Financial Aid </div>				
-				{% endif %}
-			<div id = "menu_item"> <a href="testimony"> Testimony </a> </div>
+				{% endif %}	
 			<div id = "menu_item"> <a href="register"> Registration </a> </div>
 			<div id = "menu_item">
         		{% if not contact %}

@@ -90,7 +90,7 @@ a {
 
 container a{
   margin: 10px 50px 0px;
-  color: rgb(240,240,240)
+  color: rgb(240,240,240);
 }
 
 #icon_bar{
@@ -129,4 +129,12 @@ container a{
 	position: relative;
 	top: 50px;
 	font-size: 1.5em;
+}
+.imgright {
+float:right;
+margin-right: 50px;
+}
+.imgleft {
+float:left;
+margin-left: 50px;
 }

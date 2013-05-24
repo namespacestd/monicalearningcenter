@@ -13,7 +13,7 @@
 #nav {
 	margin:0px auto 0px 0px;
 	background-color:rgb(17,46,80);
-	background-image:url("../img/dbtile.png");
+	/*background-image:url("../img/dbtile.png");*/
 	background-repeat:yes;
 	width: 347px;
 	height: 100%;

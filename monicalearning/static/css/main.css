@@ -147,3 +147,7 @@ margin-right: 50px;
 float:left;
 margin-left: 50px;
 }
+
+.subtabs#init_tab{
+	display: inherit;
+}

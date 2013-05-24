@@ -1,7 +1,7 @@
 var currentTab = 0;
 
 $(window).bind("load", function() {
-	$('#init_tab').css("display", "inherit");
+	
 
     $('#contact').click(function(event) {
     	if(currentTab!=0){

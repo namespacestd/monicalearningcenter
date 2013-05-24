@@ -13,6 +13,8 @@
 #nav {
 	margin:0px auto 0px 0px;
 	background-color:rgb(17,46,80);
+	background-image:url("../img/dbtile.png");
+	background-repeat:yes;
 	width: 347px;
 	height: 100%;
 	float: left;
@@ -67,6 +69,8 @@ a {
 	height: 720px;
 	float: right;
 	background-color: rgb(81,107,138);
+  background-image:url("../img/lbtile.png");
+	background-repeat:yes;
 	overflow: auto;
 }
 
@@ -93,7 +97,7 @@ a {
   color: rgb(180,180,180);
 }
 
-container a:hover{
+.container a:hover{
   color: rgb(150,150,150);
 }
 

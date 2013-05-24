@@ -57,8 +57,7 @@ def delete(request):
 		return render(request, 'admin_news.html', {'deleted': True, 'form':form, 'all_news':News_Post.objects.all().order_by('year','month').reverse()})
 
 def login_request(request):
-	print(request.POST.values())
-	username = request.POST['user']
+	username = request.POST['username']
 	password = request.POST['password']
 
 	if(username!="" and password!=""):
@@ -67,7 +66,7 @@ def login_request(request):
 		if user is not None and user.is_authenticated():
 			login(request, user)
 
-	return redirect('admin_news.html')
+	return admin_news(request)
 
 def logout_request(request):
 	logout(request)

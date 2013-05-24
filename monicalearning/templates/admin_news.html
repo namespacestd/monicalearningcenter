@@ -61,7 +61,7 @@
             Only for Administrators: Please Login Below
             <form method="post" action="/login_request/">
                 {% csrf_token %}
-                <input type="text" name="user" placeholder="Username" class="login-field" value ="">
+                <input type="text" name="username" placeholder="Username" class="login-field" value ="">
                 <input type="password" name="password" placeholder="Password" class="login-field" value = "">
                 <button type="submit" name="submit" class="big-button">Log In</button>
                 <input type="hidden" name="login_form" value="1" />

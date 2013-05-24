@@ -21,6 +21,7 @@ urlpatterns = patterns('',
     url(r'^delete', delete),
     url(r'^login_request', login_request),
     url(r'^logout_request', logout_request),
+    url(r'^upload_schedule', upload_schedule),
     # Examples:
     # url(r'^$', 'monicalearning.views.home', name='home'),
     # url(r'^monicalearning/', include('monicalearning.foo.urls')),

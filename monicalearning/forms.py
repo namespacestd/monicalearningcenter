@@ -72,7 +72,8 @@ class NewsForm(forms.Form):
 	news = forms.CharField(widget=forms.Textarea)
 	author = forms.CharField(max_length=30, required = False)
 
-
+class UploadFileForm(forms.Form):
+	schedule  = forms.FileField()
 
 
 

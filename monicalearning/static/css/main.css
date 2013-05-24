@@ -116,3 +116,8 @@ a {
 .superspecial{
 	padding-top: 15px;
 }
+#quicklink{
+	position: relative;
+	top: 40px;
+	font-size: 27px;
+}

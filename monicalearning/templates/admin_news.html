@@ -21,6 +21,10 @@
                     News Post Added
                 {% elif deleted %}
                     News Post Deleted
+                {% elif uploaded %}
+                    Upload Successful
+                {% elif upload_fail %}
+                    Upload Failed
                 {% endif %}
             </div>
             <div class = "add_news">
@@ -48,6 +52,19 @@
                 </form>
             </br></br>
             
+            </div>
+
+            <div class = "upload_schedule">
+                <h1> Upload Schedule </h1>
+
+                <form action="upload_schedule" method="post" enctype="multipart/form-data">
+                    <table>
+                        {{ schedule_form.as_table }}
+                    </table>
+                    {% csrf_token %}
+                    </br></br></br>
+                    <input type="submit" value="Upload">
+                </form>
             </div>
 
             <div class = "logout">

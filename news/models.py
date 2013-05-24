@@ -1,6 +1,9 @@
 from django.db import models
 from django import forms
 
+class Schedule(models.Model):
+	name = models.CharField(max_length=50)
+
 class News_Post(models.Model):
 	NEWS_MONTHS = (
 		('January', 'A-January'),

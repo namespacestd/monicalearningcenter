@@ -25,7 +25,5 @@ p{
 #specialdate{
 	position: relative;
   left: -25px;
-}
-#specialentry{
-	width: 10%;
+  width: 10%;
 }

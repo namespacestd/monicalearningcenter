@@ -26,7 +26,7 @@ def about_us(request):
 	return render(request, 'about_us.html', {'about_us' : True, 'current_schedule' : Schedule.objects.all()[0].name,})
 
 def news(request):
-	return render(request, 'news.html', {'current_schedule' : Schedule.objects.all()[0].name,'all_news':News_Post.objects.all().order_by('year','month').reverse(), 'all_news_size':len(News_Post.objects.all())})
+	return render(request, 'news.html', {'current_schedule' : Schedule.objects.all()[0].name,'all_news':sortNews(News_Post.objects.all()), 'all_news_size':len(News_Post.objects.all())})
 
 def admin_news(request):
 	global deleted
@@ -50,16 +50,51 @@ def admin_news(request):
 			form = NewsForm()
 			schedule_form = UploadFileForm()
 			if request.user.is_authenticated():
-				return render(request, 'admin_news.html', {'uploaded' : upload, 'upload_fail' : failed, 'deleted' : delete,'current_schedule' : Schedule.objects.all()[0].name,'schedule_form':schedule_form, 'logged_in':True, 'added': True,'form':form, 'all_news':News_Post.objects.all().order_by('year','month').reverse()})
+				return render(request, 'admin_news.html', {'uploaded' : upload, 'upload_fail' : failed, 'deleted' : delete,'current_schedule' : Schedule.objects.all()[0].name,'schedule_form':schedule_form, 'logged_in':True, 'added': True,'form':form, 'all_news':sortNews(News_Post.objects.all())})
 			else:
-				return render(request, 'admin_news.html', {'uploaded' : upload, 'upload_fail' : failed, 'deleted' : delete,'current_schedule' : Schedule.objects.all()[0].name,'schedule_form':schedule_form, 'added': True,'form':form, 'all_news':News_Post.objects.all().order_by('year','month').reverse()})
+				return render(request, 'admin_news.html', {'uploaded' : upload, 'upload_fail' : failed, 'deleted' : delete,'current_schedule' : Schedule.objects.all()[0].name,'schedule_form':schedule_form, 'added': True,'form':form, 'all_news':sortNews(News_Post.objects.all())})
 	if request.user.is_authenticated():
 		form = NewsForm()
 		schedule_form = UploadFileForm()
-		return render(request, 'admin_news.html', {'uploaded' : upload, 'upload_fail' : failed,'deleted' : delete, 'current_schedule' : Schedule.objects.all()[0].name,'schedule_form':schedule_form, 'logged_in':True, 'form':form, 'all_news':News_Post.objects.all().order_by('year','month').reverse()})
+		return render(request, 'admin_news.html', {'uploaded' : upload, 'upload_fail' : failed,'deleted' : delete, 'current_schedule' : Schedule.objects.all()[0].name,'schedule_form':schedule_form, 'logged_in':True, 'form':form, 'all_news':sortNews(News_Post.objects.all())})
 	else:
-		return render(request, 'admin_news.html', {'uploaded' : upload, 'upload_fail' : failed,'deleted' : delete, 'current_schedule' : Schedule.objects.all()[0].name,'all_news':News_Post.objects.all().order_by('year','month').reverse()})
-	
+		return render(request, 'admin_news.html', {'uploaded' : upload, 'upload_fail' : failed,'deleted' : delete, 'current_schedule' : Schedule.objects.all()[0].name,'all_news':sortNews(News_Post.objects.all())})
+
+def sortNews(all_news):
+	all_news_list = []
+	for news in all_news:
+		all_news_list.append(news)
+
+	date_ordering = {
+		'January' : 1, 
+		'February' : 2,
+		'March': 3,
+		'April': 4,
+		'May': 5,
+		'June': 6,
+		'July': 7,
+		'August': 8,
+		'September': 9,
+		'October': 10,
+		'November': 11,
+		'December': 12,
+	}
+	smallest_index = 0
+
+	for i in range(0, len(all_news_list)):
+		smallest_index = i
+		for j in range(i+1, len(all_news_list)):
+			if all_news_list[j].year >= all_news_list[smallest_index].year:
+				if date_ordering[all_news_list[j].month] >= date_ordering[all_news_list[smallest_index].month]:
+					smallest_index = j
+		temp = all_news_list[i]
+		all_news_list[i] = all_news_list[smallest_index]
+		all_news_list[smallest_index] = temp
+
+	return all_news_list
+
+
+
 
 
 def delete(request):

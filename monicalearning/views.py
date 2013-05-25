@@ -84,9 +84,12 @@ def sortNews(all_news):
 	for i in range(0, len(all_news_list)):
 		smallest_index = i
 		for j in range(i+1, len(all_news_list)):
-			if all_news_list[j].year >= all_news_list[smallest_index].year:
+			if all_news_list[j].year > all_news_list[smallest_index].year:
+				smallest_index = j
+			elif all_news_list[j].year == all_news_list[smallest_index].year:
 				if date_ordering[all_news_list[j].month] >= date_ordering[all_news_list[smallest_index].month]:
 					smallest_index = j
+
 		temp = all_news_list[i]
 		all_news_list[i] = all_news_list[smallest_index]
 		all_news_list[smallest_index] = temp

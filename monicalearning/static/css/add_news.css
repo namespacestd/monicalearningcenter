@@ -2,6 +2,9 @@
 	margin-top: 20px;
 	font-size: 25px;
 	color: red;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 .add_news{
 	width: 45%;

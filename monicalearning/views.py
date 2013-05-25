@@ -9,6 +9,10 @@ from news.models import *
 from monicalearning.forms import *
 from django.core.files import File
 
+deleted = False
+uploaded = False
+upload_failed = False
+
 def home(request):
 	return render(request, 'home.html', {'current_schedule' : Schedule.objects.all()[0].name, 'home' : True})
 
@@ -25,6 +29,18 @@ def news(request):
 	return render(request, 'news.html', {'current_schedule' : Schedule.objects.all()[0].name,'all_news':News_Post.objects.all().order_by('year','month').reverse(), 'all_news_size':len(News_Post.objects.all())})
 
 def admin_news(request):
+	global deleted
+	delete = deleted
+	deleted = False
+
+	global uploaded
+	upload = uploaded
+	uploaded = False
+
+	global upload_failed
+	failed = upload_failed
+	upload_failed = False
+
 	if request.method == 'POST':
 		form = NewsForm(request.POST)
 		if form.is_valid():
@@ -34,30 +50,28 @@ def admin_news(request):
 			form = NewsForm()
 			schedule_form = UploadFileForm()
 			if request.user.is_authenticated():
-				return render(request, 'admin_news.html', {'current_schedule' : Schedule.objects.all()[0].name,'schedule_form':schedule_form, 'logged_in':True, 'added': True,'form':form, 'all_news':News_Post.objects.all().order_by('year','month').reverse()})
+				return render(request, 'admin_news.html', {'uploaded' : upload, 'upload_fail' : failed, 'deleted' : delete,'current_schedule' : Schedule.objects.all()[0].name,'schedule_form':schedule_form, 'logged_in':True, 'added': True,'form':form, 'all_news':News_Post.objects.all().order_by('year','month').reverse()})
 			else:
-				return render(request, 'admin_news.html', {'current_schedule' : Schedule.objects.all()[0].name,'schedule_form':schedule_form, 'added': True,'form':form, 'all_news':News_Post.objects.all().order_by('year','month').reverse()})
+				return render(request, 'admin_news.html', {'uploaded' : upload, 'upload_fail' : failed, 'deleted' : delete,'current_schedule' : Schedule.objects.all()[0].name,'schedule_form':schedule_form, 'added': True,'form':form, 'all_news':News_Post.objects.all().order_by('year','month').reverse()})
 	if request.user.is_authenticated():
 		form = NewsForm()
 		schedule_form = UploadFileForm()
-		return render(request, 'admin_news.html', {'current_schedule' : Schedule.objects.all()[0].name,'schedule_form':schedule_form, 'logged_in':True, 'form':form, 'all_news':News_Post.objects.all().order_by('year','month').reverse()})
+		return render(request, 'admin_news.html', {'uploaded' : upload, 'upload_fail' : failed,'deleted' : delete, 'current_schedule' : Schedule.objects.all()[0].name,'schedule_form':schedule_form, 'logged_in':True, 'form':form, 'all_news':News_Post.objects.all().order_by('year','month').reverse()})
 	else:
-		return render(request, 'admin_news.html', {'current_schedule' : Schedule.objects.all()[0].name,'all_news':News_Post.objects.all().order_by('year','month').reverse()})
+		return render(request, 'admin_news.html', {'uploaded' : upload, 'upload_fail' : failed,'deleted' : delete, 'current_schedule' : Schedule.objects.all()[0].name,'all_news':News_Post.objects.all().order_by('year','month').reverse()})
 	
 
 
 def delete(request):
 	if request.user.is_authenticated():
 		try:
-			form = NewsForm()
 			item = News_Post.objects.get(id=request.POST.getlist('to_delete')[0])
 			item.delete()
 		except Exception:
 			print "Already Deleted"
-		return render(request, 'admin_news.html', {'current_schedule' : Schedule.objects.all()[0].name,'schedule_form':schedule_form, 'logged_in':True, 'deleted': True, 'form':form, 'all_news':News_Post.objects.all().order_by('year','month').reverse()})
-
-	else:
-		return render(request, 'admin_news.html', {'current_schedule' : Schedule.objects.all()[0].name,'deleted': True, 'form':form, 'all_news':News_Post.objects.all().order_by('year','month').reverse()})
+		global deleted 
+		deleted = True
+	return redirect('/admin_news')
 
 def upload_schedule(request):
 	if request.method == 'POST':
@@ -65,12 +79,13 @@ def upload_schedule(request):
 			handle_uploaded_file(request.FILES['schedule'])
 			form = NewsForm()
 			schedule_form = UploadFileForm()
-			return render(request, 'admin_news.html', {'current_schedule' : Schedule.objects.all()[0].name,'logged_in': True, 'schedule_form':schedule_form,'uploaded': True, 'form':form, 'all_news':News_Post.objects.all().order_by('year','month').reverse()})
+			global uploaded
+			uploaded = True
 		except Exception:
 			form = NewsForm()
 			schedule_form = UploadFileForm()
-			return render(request, 'admin_news.html', {'current_schedule' : Schedule.objects.all()[0].name,'logged_in': True, 'schedule_form':schedule_form,'upload_fail': True, 'form':form, 'all_news':News_Post.objects.all().order_by('year','month').reverse()})
-		
+			global upload_failed
+			upload_failed = True
 	return redirect('/admin_news')
 
 def login_request(request):

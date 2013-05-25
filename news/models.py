@@ -19,7 +19,7 @@ class News_Post(models.Model):
 		('November', 'K-November'),
 		('December', 'L-December'),
 	)
-	title = models.CharField(max_length=30)
+	title = models.CharField(max_length=50)
 	month = models.CharField(max_length=15, choices=NEWS_MONTHS, default='January')
 	year = models.IntegerField(max_length=4)
 	news = models.TextField()

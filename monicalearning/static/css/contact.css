@@ -44,3 +44,12 @@ label{
   margin: 0px 50px 0px 20px;
   float: right;
 }
+
+#mission_directions{
+	margin-left: 50px;
+	margin-top: 50px;
+	height: 500px;
+	width: 325px;
+	overflow: auto;
+	overflow-x: hidden;
+}

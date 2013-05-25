@@ -1,0 +1,13 @@
+
+.subjects{
+	width: 38%;
+	padding: 50px;
+	padding-top: 30px;
+	font-size: 20px;
+}
+.subjects.left{
+	float: left;
+}
+.subjects.right{
+	float: right;
+}

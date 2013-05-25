@@ -16,7 +16,7 @@ function startSlideshow(numSlides){
 		hideAll(numSlides);
 		slideNumber = numSlides;
 		setInterval(function(){slideShow()}, 6000);
-		setInterval(function(){newsTicker()}, 7000);
+		setInterval(function(){newsTicker()}, 7500);
 	}
 	catch(err){
 	}

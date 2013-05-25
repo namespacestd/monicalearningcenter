@@ -1,12 +1,12 @@
-var currentTab = 0;
+var currentTab = 1;
 
 $(window).bind("load", function() {
 	$('#resources').click(function(event) {
-    	if(currentTab!=0){
+    	if(currentTab!=1){
 	    	$('.subtabs').fadeOut(2000);
-	    	$('#init_tab').fadeIn(2000);
+	    	$('#practice_info').fadeIn(2000);
 	    }
-    	currentTab = 0;
+    	currentTab = 1;
 	});
 
     $('#practice').click(function(event) {

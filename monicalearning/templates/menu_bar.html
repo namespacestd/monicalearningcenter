@@ -33,7 +33,8 @@
 					<div class = "dropdown_option" id = "star"> Star </div>
 					<div class = "dropdown_option" id = "chinese"> Chinese </div>
 				{% endif %}
-			<div id = "menu_item"> 
+			<div id = "menu_item"> <a href="register"> Registration </a> </div>
+      <div id = "menu_item"> 
 				{% if not resources %}
 					<a href="resources"> Resources </a>
 				{% else %}
@@ -45,7 +46,6 @@
 					<div class = "dropdown_option" id = "intern"> Volunteer / Internship Opportunities </div>
 					<div class = "dropdown_option" id = "aid"> Financial Aid </div>				
 				{% endif %}	
-			<div id = "menu_item"> <a href="register"> Registration </a> </div>
 			<div id = "menu_item">
         		{% if not contact %}
         			<a href="contact_us"> Contact Us </a>

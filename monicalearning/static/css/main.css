@@ -151,3 +151,6 @@ margin: 16px 20px 10px 50px;
 .subtabs#init_tab{
 	display: inherit;
 }
+.map{
+margin: 0px auto 0px;
+}

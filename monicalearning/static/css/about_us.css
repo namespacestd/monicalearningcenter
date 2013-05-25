@@ -18,7 +18,8 @@ p{
 .date_entry{
 	float: right;
 	width: 85%;
-	font-size: 1.3em;
+	font-size: 1.25em;
+  padding-top: 2px;
 }
 #second{
 	padding-top: 15px;

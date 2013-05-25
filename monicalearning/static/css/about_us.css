@@ -13,12 +13,12 @@ p{
 .date{
 	float: left;
 	width: 5%;
-	font-size: 25px;
+	font-size: 1.5em;
 }
 .date_entry{
 	float: right;
 	width: 85%;
-	font-size: 20px;
+	font-size: 1.3em;
 }
 #second{
 	padding-top: 15px;
@@ -28,5 +28,5 @@ p{
 }
 
 .bigger{
-  font-size: 1.3em
+  font-size: 1.5em
 }

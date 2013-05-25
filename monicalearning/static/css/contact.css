@@ -37,3 +37,13 @@ label{
 }
 .contact_body{
 }
+.pair{
+  height: 550px;
+}
+.address{
+  float: left;
+}
+.map{
+  margin: 20px 50px 0px 20px;
+  float: right;
+}

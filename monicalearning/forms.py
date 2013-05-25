@@ -66,7 +66,7 @@ class NewsForm(forms.Form):
 		('November', 'K-November'),
 		('December', 'L-December'),
 	)
-	title = forms.CharField(max_length=30, required = False)
+	title = forms.CharField(max_length=50, required = False)
 	month = forms.ChoiceField(choices=NEWS_MONTHS)
 	year = forms.IntegerField()
 	news = forms.CharField(widget=forms.Textarea)

@@ -1,3 +1,4 @@
+
 p{
 	padding-bottom: 10px;
 }
@@ -13,21 +14,14 @@ p{
 .date{
 	float: left;
 	width: 5%;
-	font-size: 1.5em;
+	font-size: 25px;
 }
 .date_entry{
 	float: right;
 	width: 85%;
-	font-size: 1.25em;
-  padding-top: 2px;
+	font-size: 20px;
 }
-#second{
-	padding-top: 15px;
-}
-#second_special{
-	padding-bottom: 30px;
-}
-
-.bigger{
-  font-size: 1.5em
+#special{
+	position: relative;
+  left: -25px;
 }

@@ -1,6 +1,8 @@
 var currentSlide = 1;
 var slideNumber = 0;
 
+var currentNews = 1;
+
 function startSlideshow(numSlides){
 	var begin = "<div class = \"slide\" id = \"slide";
 
@@ -13,7 +15,8 @@ function startSlideshow(numSlides){
 		document.getElementById('slideshow_background').innerHTML = allSlides;
 		hideAll(numSlides);
 		slideNumber = numSlides;
-		var myVar = setInterval(function(){slideShow()}, 6000);
+		setInterval(function(){slideShow()}, 6000);
+		setInterval(function(){newsTicker()}, 7000);
 	}
 	catch(err){
 	}
@@ -23,6 +26,14 @@ function hideAll(numSlides){
 	for(var i=2; i<=numSlides;i++){
 		$("#slide"+i).css("display", "none");
 	}
+}
+
+function newsTicker(){
+	$('.slogan'+currentNews).slideUp(2000);
+	currentNews++;
+	if(currentNews > 4)
+		currentNews = 1;
+	$('.slogan'+currentNews).slideToggle(2000);
 }
 
 function slideShow(){

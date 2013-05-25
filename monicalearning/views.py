@@ -14,7 +14,8 @@ uploaded = False
 upload_failed = False
 
 def home(request):
-	return render(request, 'home.html', {'current_schedule' : Schedule.objects.all()[0].name, 'home' : True})
+	all_news = sortNews(News_Post.objects.all())
+	return render(request, 'home.html', {'recent_news1' : all_news[0], 'recent_news2' : all_news[1], 'recent_news3' : all_news[2], 'current_schedule' : Schedule.objects.all()[0].name, 'home' : True})
 
 def our_program(request):
 	return render(request, 'our_program.html', {'current_schedule' : Schedule.objects.all()[0].name, 'program' : True })

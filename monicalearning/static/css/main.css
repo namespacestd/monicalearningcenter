@@ -141,11 +141,11 @@ a {
 }
 .imgright {
 float:right;
-margin-right: 50px;
+margin: 16px 50px 10px 20px;
 }
 .imgleft {
 float:left;
-margin-left: 50px;
+margin: 16px 20px 10px 50px;
 }
 
 .subtabs#init_tab{

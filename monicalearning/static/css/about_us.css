@@ -14,16 +14,16 @@ p{
 .date{
 	float: left;
 	width: 5%;
-	font-size: 25px;
+	font-size: 1.5em;
 }
 .date_entry{
 	float: right;
 	width: 85%;
-	font-size: 20px;
+	font-size: 1.25em;
+  padding-top:2px
 }
-#second{
-	padding-top: 15px;
-}
-#second_special{
-	padding-bottom: 30px;
+#specialdate{
+	position: relative;
+  left: -25px;
+  width: 15%;
 }

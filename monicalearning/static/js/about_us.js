@@ -24,4 +24,12 @@ $(window).bind("load", function() {
 	    }
     	currentTab = 2;
 	});
+
+	$('#faqs').click(function(event){
+		if(currentTab!=3){
+			$('.subtabs').fadeOut(2000);
+			$('#faq_info').fadeIn(2000);
+		}
+		currentTab=3;
+	});
 });

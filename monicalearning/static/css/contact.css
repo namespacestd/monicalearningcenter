@@ -39,7 +39,6 @@ label{
 }
 .pair{
   height: 500px;
-  margin: 0px 0px 0px 50px;
 }
 .map{
   margin: 0px 50px 0px 20px;
@@ -51,4 +50,5 @@ label{
 	width: 325px;
 	overflow: auto;
 	overflow-x: hidden;
+  margin: 20px 0px 0px 50px;
 }

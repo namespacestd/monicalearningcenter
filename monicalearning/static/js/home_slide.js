@@ -29,11 +29,11 @@ function hideAll(numSlides){
 }
 
 function newsTicker(){
-	$('.slogan'+currentNews).slideUp(2000);
+	$('#slogan'+currentNews).slideUp(2000);
 	currentNews++;
 	if(currentNews > 4)
 		currentNews = 1;
-	$('.slogan'+currentNews).slideToggle(2000);
+	$('#slogan'+currentNews).slideToggle(2000);
 }
 
 function slideShow(){

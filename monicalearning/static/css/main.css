@@ -48,7 +48,7 @@
 	margin-left: 25px;
 	font-size: 1.5em;
 }
-#menu_item{
+.menu_item{
 	margin-top: 10px;
 }
 .dropdown_option{
@@ -131,7 +131,7 @@ a {
 .init{
 	cursor: pointer;
 }
-.superspecial{
+#superspecial{
 	padding-top: 15px;
 }
 #quicklink{

@@ -12,19 +12,19 @@
 #slogan{
 	width: 1310px;
 }
-#slogan_text{
+.slogan_text{
 	font-size: 1.75em;
 	float: right;
 	width: 960px;
 	padding-top: 14px;
 	text-align: center;
 }
-.slogan2{
+#slogan2{
 	display: none;
 }
-.slogan3{
+#slogan3{
 	display: none;
 }
-.slogan4{
+#slogan4{
 	display: none;
 }

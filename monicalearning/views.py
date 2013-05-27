@@ -157,7 +157,7 @@ def contact_us(request):
 				except Exception: 
 					info += (field.label + ": " + "<Not Filled In>" + "\n")
 				
-			send_mail("Question Form for: " + cd['name'], info, 'noreply@example.com', ['ihasnamespacestd@gmail.com'], fail_silently=False)
+			send_mail("Question Form for: " + cd['name'], info, 'noreply@example.com', ['monicalearning@yahoo.com'], fail_silently=False)
 			return render(request, 'contact_us.html', {'contact': True, 'current_schedule' : Schedule.objects.all()[0].name,'email_sent' : True})
 	else:
 		form = ContactForm()

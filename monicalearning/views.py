@@ -175,7 +175,7 @@ def register(request):
 				except Exception: 
 					info += (field.label + ": " + "<Not Filled In>" + "\n")
 				
-			send_mail("Registration Form for: " + cd['student_name'], info, 'noreply@example.com', ['ihasnamespacestd@gmail.com'], fail_silently=True)
+			send_mail("Registration Form for: " + cd['student_name'], info, 'noreply@example.com', ['monicalearning@yahoo.com'], fail_silently=True)
 			return render(request, 'register.html', {'current_schedule' : Schedule.objects.all()[0].name,'email_sent' : True})
 	else:
 		form = RegistrationForm()
